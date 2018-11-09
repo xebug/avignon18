@@ -12,6 +12,7 @@
    - A la fin d’un sprint un deliverable fonctionnel est publié sur le GIT
     - A chaque nouveau sprint on change les groupes.
 * Présentation des résultats et décision des tâches à faire au CM suivant.
+* Ceci est votre repo, faites des pull requests!
 
 ## Combien?
 * Chaque étudiant•e participe donc à 4 sprints.
