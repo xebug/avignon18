@@ -15,3 +15,7 @@
 * Stockage
   * Stockage des données
   * Récupération des données en cas de litige
+
+* Confiance
+  * Calcul robuste du ranking
+  * Identification des conducteurs/clients
