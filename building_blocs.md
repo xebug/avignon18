@@ -1,6 +1,6 @@
 * Blockchain
 
-  * Identifiants
+  * Identifiants - Groupe 1 (DESTREE Gabriel, RASSU Michael, BENCHRIFA Mohamed Amine, AMINE KHODJA Ahmed Ramy)
   * Demande de trajet
   * Acceptation d’un trajet
   * Validation d’un trajet effectué
