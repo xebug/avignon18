@@ -4,7 +4,7 @@
   * Demande de trajet
   * Acceptation d’un trajet
   * Validation d’un trajet effectué
-  * Mining
+  * Mining : ALCARAZ BAUMEL EL KADOURI SERVILLAT
   * Choix de la branche
   
 * Réseau:
