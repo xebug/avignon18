@@ -1,0 +1,46 @@
+
+On prend en compte que la demande de trajet se comporte d'une manière similaire à la suivante:
+id_client connecté
+id_client point_1 & point_2 
+id_client cost
+id_client send to all id_chauffeur in avignon
+
+On prend aussi en compte que les fonctions existent et marchent de la façon suivante:
+id: fonction qui regroupe les chauffeurs et les clients sous un identifiant unique
+connecté: fonction qui vérifie si l'individu est bien connecté
+libre: fonction appellée pour voir si le client ou le chauffeur est libre
+verif_certification: fonction qui certifie que l'application est non modifiée
+cost: fonction qui calcul le prix de base pour le trajet en prenant compte de la distance chauffeur/client, du temps et de la longueur du trajet 
+edit_cost: fonction qui permet au chauffeur de modifier le prix du trajet
+position: fonction qui collecte les coordonées du chauffeur avant chaque transmission de données
+encrypt: fonction qui hash les informations avec les clées
+decrypt: fonction qui décrypt les information avec les clées
+send: fonction qui envoie un message à quelqu'un
+
+Notre acceptation marchera alors d'une manière similaire à ce squelette de fonction:
+
+id_chauffeur see all id_client who requested
+id_chauffeur connecté
+id_chauffeur libre
+id_chauffeur verif_certification
+id_chauffeur cost
+id_chauffeur edit_cost
+id_chauffeur accept or id_chauffeur decline
+id_chauffeur position
+collect key
+use key to encrypt -> (accept + position + time + final_cost) 
+id_chauffeur send encrypted to client or send decline to client
+
+id_client see all id_chauffeur who accepted (ranked by stars and time)
+id_client connecté
+id_client verif_certification
+id_client view cost
+id_client accept id_chauffeur or id_client decline id_chauffeur
+id_client position
+use key to encrypt -> (accept + position)
+id_client send encrypted to client or send decline to client
+
+while id_chauffeur not here id_client can refuse (1€ par minute)
+id_chauffeur can't accept id_client2 if overtime
+id_chauffeur final_accept crypté id_client
+
