@@ -4,6 +4,7 @@
   * Demande de trajet
   * Acceptation d’un trajet : ADDA Ahlem Lamia, PORQUEZ William , SANNI Habil , BM
   * Validation d’un trajet effectué
+       --- TP2 : ADDA Ahlem, ALCARAZ Hugo, ISLAHI Chaimae, NDIAYE Samba Oumar
   * Mining : ALCARAZ BAUMEL EL KADOURI SERVILLAT
   * Choix de la branche
   
