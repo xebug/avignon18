@@ -1,0 +1,37 @@
+Demande de trajet et acceptation du trajet
+
+Etape 1: Demande de trajet
+
+1- identifiant
+	* l'identifiant ne doit pas identifié de facon precise le demandeur de la course 		
+	  mais doit être construit de manière aléatoire 
+2- localisation : intervalle position -/+ valeur aléatoire 1 
+	* la valeur aléatoire ne doit pas être assez grande pour ne pas influencer sur la longeur du trajet
+	* elle definit le rayon de la zone de départ 
+3- destination : lieu d'arrivé -/+ valeur aléatoire 2
+	* la valeur aléatoire ne doit pas être assez grande pour ne pas influencer sur la longeur du trajet
+	* elle definit le rayon de la zone d'arrivée  
+
+4- Multicast à un groupe de chauffeur aux alentours de 2 km (se base sur le routage)
+5- coût approximatif au kilomètre: propose son prix 
+6- heure de la demande (Annulation de la demande au bout de 1min) 
+7- Le client propose une nouvelle enchère par kilomètre si aucune réponse après une minute
+
+Etape 2: Acceptation du trajet
+
+8- Reponses des chauffeurs interessés avec sa position actuelle et les chauffeurs sont organisés par ordre de proximité
+	* la position du chauffeur est une donnée publique donc elle peut être partagée 
+10- Le client répond avec sa localisation et sa destination exacte au chauffeur le plus proche
+	* si sa demande est refusée au bout de 10s les données de localisation sont envoyées au prochain 		le plus proche
+11- Le chauffeur qui accèpte la course en premier est choisie
+12- Annulation automatique chez tout les autres chauffeurs
+  
+Author:
+Marc AMOUZOUN
+Alpha Oumar KANTE
+Samba Oumar Ndiaye
+Nesrine TETAH
+
+
+
+	
