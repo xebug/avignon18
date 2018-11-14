@@ -3,7 +3,7 @@
   * Identifiants - Groupe 1 (DESTREE Gabriel, RASSU Michael, BENCHRIFA Mohamed Amine, AMINE KHODJA Ahmed Ramy)
   * Demande de trajet
   * Acceptation d’un trajet : ADDA Ahlem Lamia, PORQUEZ William , SANNI Habil , BM
-  * Validation d’un trajet effectué
+  * Validation d’un trajet effectué - Groupe 5 (TETAH Nesrine, PORQUEZ William, RASSU Michael, SERVILLAT Fabien)
   * Mining : ALCARAZ BAUMEL EL KADOURI SERVILLAT
   * Choix de la branche
   
