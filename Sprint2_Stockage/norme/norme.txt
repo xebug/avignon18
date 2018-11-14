@@ -1,0 +1,5 @@
+id_demandeur:id_chauffeur:adresse départ: adresse arrivée: distance:prix
+
+Si la liste des course est pair , pas de soucis on fait merkle tree , sinon on stocke le dernier élément , on fait le merkle tree avec tous les autres ( qui sont un nombre pair du coup) et une fois qui nous reste qu'un seul hash on le concatène avec le dernier qu'on avait stocké
+
+
