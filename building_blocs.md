@@ -64,7 +64,6 @@
     # La blockchaine est simulé par une simple liste où l'entré i correspond au i'eme  block. On ne
     # supporte pas les forks.
     # Exemple: blockchain = [b1, b2, b3] signifie que le premier block est b1, suivi de b2, puis de b3.
-    """
     blockchain = list()
     
     def computeBlock(transactions):
@@ -84,13 +83,11 @@
     blocs: liste des blocs parmis lesquel en choisir un
     return le bloc qui a gagné
     """
-    """
-    Exemple d'utilisation: 
-    b1 = compteBlock(["t1", "t3", "t2"])
+    #Exemple d'utilisation: 
+    b1 = computeBlock(["t1", "t3", "t2"])
     b2 = computeBlock(["t1", "t2"])
     new_block = electBlock([b1,b2])
     blockchain.append(new_block)
-    """
     ```
 5. Stockage de données protégées avec schéma de shamir
 
