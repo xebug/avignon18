@@ -11,11 +11,11 @@
   
 * Réseau:
   * Découverte de noeuds
-  * Routage des messages entre les noeuds
+  * Routage des messages entre les noeuds (DESTREE Gabriel, BENCHRIFA Mohamed, BOUZID Fares, AMAZOUNE Marc, KANE Ababakar)
   * Broadcast de messages
   
 * Stockage
-  * Stockage des données
+  * Stockage des données 
   * Récupération des données en cas de litige
 
 * Confiance
