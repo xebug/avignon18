@@ -26,7 +26,7 @@
      """
     ```
 
-2. Generare un identifiant qui comprend une partie immuable (ADDA Ahlem Lamia , ELFEKRI Ismail , ELKADOURI Soufiane ,SANNI Habi
+2. Generare un identifiant qui comprend une partie immuable 
 
     ```python
     def getCurrentLocation(anonymized=False):
@@ -48,6 +48,12 @@
 
 3. Implémenter une API pour serveur de découverte de noeuds (et un simulateur de client)
     En Flask:
+    
+    BENCHRIFA Mohamed Amine
+    DESTREE Gabriel
+    NDIAYE El Hadj Pathé
+    PORQUEZ William
+   
     
     ```
     GET /nodes/         liste de tous les IDs des noeuds connus
