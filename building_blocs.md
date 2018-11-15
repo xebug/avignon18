@@ -103,6 +103,10 @@ Groupe_generate
     blockchain.append(new_block)
     ```
 5. Stockage de données protégées avec schéma de shamir : Bouzid, Islahi, Baumel, Rassu, Monetta
+ AMINE KHODJA Ahmed Ramy
+      Aissam ELFILALI
+      Mounir CHUIAKH
+      TETAH nesrine
 
     ```python
     
