@@ -16,6 +16,11 @@ g = "Je suis le premier block"
 Block = "Block"
 nombre = "0"
 
+def prime(x):
+    if x%2==0:return False
+    elif any(x%i==0 for i in xrange(3,int(sqrt(x))+1,2)):return False
+    else:return True
+
 def generer_listID(nbr):
 	pays = ["FR","DZ","MA","ES","DD","AR","AO","AT","CN","DK","ET","EG"]
 	dep = ["80","45","65","14","74","65","21","15","65","14","23","74"]
@@ -79,6 +84,8 @@ def storeSecret(secret, k, id):
 	x=0 # on commence on premier noeud
 	while x < nombreUsers:
 		node[x] = computeX(polynome,x)
+		prime_list=[x for x in xrange(secret,99999) if prime(x)] # p entre secret et l'infini
+		p = random.choice(prime_list)
 		node[x] = pow(node[x],1,p) # modulo p
 		x=x+1 # on passe au x suivant
   #On a maintenant notre liste de noeud pour les stocker
@@ -235,7 +242,11 @@ print
 print
 
 
+#def ConcaHash():
 
+# Python program to for tree traversals
+
+# A class that represents an individual node in a
+# Binary Tree
 
 storeSecret(5,2)
-
