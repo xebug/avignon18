@@ -26,7 +26,7 @@
      """
     ```
 
-2. Generare un identifiant qui comprend une partie immuable 
+2. Generare un identifiant qui comprend une partie immuable (ADDA Ahlem Lamia , ELFEKRI Ismail , ELKADOURI Soufiane ,SANNI Habi
 
     ```python
     def getCurrentLocation(anonymized=False):
