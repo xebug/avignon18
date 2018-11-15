@@ -29,6 +29,7 @@
 2. Generare un identifiant qui comprend une partie immuable 
 Groupe_generate
           Hamdi
+          TAHALI , EL HANKARI , HAMBLI , KANE
 
     ```python
     def getCurrentLocation(anonymized=False):
