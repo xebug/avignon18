@@ -30,7 +30,7 @@
 Groupe_generate
           Hamdi
           TAHALI , EL HANKARI , HAMBLI , KANE
-
+          (EL KADOURI, ADDA, SANNI, EL FEKRI)
     ```python
     def getCurrentLocation(anonymized=False):
     """
