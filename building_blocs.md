@@ -102,7 +102,7 @@ Groupe_generate
     new_block = electBlock([b1,b2])
     blockchain.append(new_block)
     ```
-5. Stockage de données protégées avec schéma de shamir
+5. Stockage de données protégées avec schéma de shamir : Bouzid, Islahi, Baumel, Rassu, Monetta
 
     ```python
     
