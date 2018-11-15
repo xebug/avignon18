@@ -3,6 +3,10 @@
 /!\ Tous les groupes doivent feront du code, vous avez 6h.
 
 1. Calculer un score robuste **ET** équitable
+          ALCARAZ
+          AMOUZOUN
+          NDIAYE
+          SERVILLAT
      ```python
     
      # Base de donnée contenant l'historique des sequences de demandes de
