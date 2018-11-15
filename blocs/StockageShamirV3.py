@@ -5,6 +5,7 @@ import os
 from binarytree import tree
 from datetime import *
 from random import *
+import request
 
 
 hashh = list()
@@ -14,6 +15,17 @@ Blockchain = dict(); #Définition du dictionnaire blockchain prinçipal
 g = "Je suis le premier block"
 Block = "Block"
 nombre = "0"
+
+def generer_listID(nbr):
+	pays = ["FR","DZ","MA","ES","DD","AR","AO","AT","CN","DK","ET","EG"]
+	dep = ["80","45","65","14","74","65","21","15","65","14","23","74"]
+	list_ID = []
+	for i in range(1,nbr) :
+		id_u = random.randint(1,100000)
+		id_H = hash(id_u)
+		id_c = pays[random.randint(0,11)]+dep[random.randint(0,11)]+str(id_H)
+		list_ID.append(id_c)
+	return list_ID
 
 
 
@@ -25,7 +37,7 @@ def generatePolynome(secret,degree):
 	for i in xrange(0,degree):
 		a = randint(1,1500)
 		var.append(a)
-	
+
 def Display(self):
 	d = degree
 	s = secret
@@ -65,15 +77,61 @@ def storeSecret(secret, k, id):
 	node = [] # liste des noeuds, node[0]=value represente (g(0)=value)
 	nombreUsers = getNumberOfUsers() #sensé retourné le nombre d'utilisateurs total du réseau
 	x=0 # on commence on premier noeud
-	while x < nombreUsers:		      node[x] = computeX(i,x)
+	while x < nombreUsers:
+		node[x] = computeX(polynome,x)
 		node[x] = pow(node[x],1,p) # modulo p
 		x=x+1 # on passe au x suivant
-		  #On a maintenant notre liste de noeud pour les stocker
-		shareSecret(node,nombreUsers)
+  #On a maintenant notre liste de noeud pour les stocker
+  	shareSecret(node,nombreUsers)
 
-def shareSecret(node,nombreUsers): #node et
-	for noeud in node:
+
+def getPublicKeyByID(id):
+	rsaKey[0]=71
+	rsaKey[1]=179
+	return rsaKey #On suppose une méthode qui retourne la clé publique sous forme (e,n)
+
+def cryptByKeyRSA(key,msg): #methode qui crypt un message avec une clé donné et retourne une liste de bloc crypté
+	listeBloc = []
+	taille_du_mot = len(msg)
+	if taille_du_mot%2!=0:
+	    mot=mot+" " # vue qu'on crypte par deux on rajoute un espace pour que la longueur du message soit pair
+	indiceBloc=0
+	i = 0
+	# jusqu'a la fin du mot on crypte 2 lettre par 2 lettres
+	while i < taille_du_mot :
+	    lettre1 = ord(mot[i])
+	    lettre2 = ord(mot[i+1])
+	    c = int(str(lettre1) + str(lettre2))
+	    lettre_crypt = pow(c,key[0])%key[1] # on crypte le bloc
+		listeBloc[indiceBloc]=lettre_crypt # on ajoute le bloc a l'indice voulu
+		indiceBloc = indiceBloc + 1 # on avance au prochain indice de la liste
+	    i = i + 2 # on avance au deux prochaine slettres
+
+def sendMsgToID(msg,id):
+	for bloc in msg:
+		r = requests.post('http://localhost:5000/users/'+id, data={bloc})
+
+
+def shareSecret(node,nombreUsers): #node et nombreUsers sont egaux (un g(x) pour chaque utilisateurs a qui on partage)
+	listeUsers = generer_listID(nombreUsers)
+	userIndex=0
+	for noeud in node: # on va envoyer une partie du secret a chaque users de notre liste
 		print "noeud :",noeud
+		# on recupere d'abord la clé publique du destinataire pour que personne sur le réseau puisse lire le message si il l'intercepte
+		publicKeyReceiver = getPublicKeyByID(listeUsers[userIndex])
+		# on doit maintenant crypter notre message a envoyé
+		msg = cryptByKeyRSA(publicKeyReceiver,noeud) #msg est la liste de bloc crypté pret a envoyé
+		sendMsgToID(msg,listeUsers[userIndex]) # on envoi le msg crypté au destinataire
+		userIndex+=1
+
+
+
+
+
+
+
+
+
 
 
 
@@ -177,12 +235,7 @@ print
 print
 
 
-#def ConcaHash():
 
-# Python program to for tree traversals
-
-# A class that represents an individual node in a
-# Binary Tree
 
 storeSecret(5,2)
-pol.Display()
+
